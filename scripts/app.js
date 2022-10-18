@@ -1,4 +1,4 @@
-import { Navbar } from './components/navbar.js';
+import Navbar from './components/navbar.js';
 import { root } from './config.js';
 import DOMHandler from './dom-handler.js';
 

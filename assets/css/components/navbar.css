@@ -1,0 +1,6 @@
+.navbar{
+    background-color: var(--crystal);
+    display: flex;
+    justify-content: space-around;
+    padding: .5rem 1rem;
+}
