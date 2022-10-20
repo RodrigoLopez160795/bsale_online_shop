@@ -5,7 +5,7 @@ import { Search } from './search.js';
 export function Navbar() {
   return `
   <nav class="navbar">
-  This is the navbar
+  <p class="logo">Bsale Test</p>
   ${Categories()}
   ${Search()}
   ${Filters()}

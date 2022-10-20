@@ -5,3 +5,26 @@
 .display_none{
     display:none;
 }
+
+.options-button{
+    align-items: center;
+    border: .5px solid var(--bsale);
+    border-radius:25%;
+    background-color: var(--azureish_white);
+    padding: .5rem;
+    cursor: pointer;
+    font-size: .8rem;
+    display: flex;
+    gap: .5rem;
+    opacity: 70%;
+}
+
+.options-button:hover{
+    opacity: 100%;
+    transition: opacity .5s ease;
+}
+
+.options-button img{
+    height:10px;
+    width: 10px;
+}
