@@ -45,41 +45,4 @@
     transition:opacity 0.5s ease;
 }
 
-input[type="checkbox"]{
-    appearance: none;
-    -webkit-appearance: none;
-    height: 14px;
-    width: 14px;
-    border:1px solid var(--purple_navy);
-    border-radius: 4px;
-    box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    background-color: var(--azureish_white);
-    opacity: 50%;
-    cursor: pointer;
-}
 
-input[type="checkbox"]:hover{
-    opacity: 100%;
-}
-
-input[type="checkbox"]:before{
-    font-family: var(--logo);
-    content:"X";
-    font-size: 9px;
-    font-weight: 900;
-    display: block;
-    display: none;
-    color: white;
-}
-
-input[type="checkbox"]:checked{
-    background-color: var(--bsale);
-    opacity: 100%;
-}
-
-input[type="checkbox"]:checked::before{
-    display: block;
-}

@@ -12,8 +12,8 @@ export function Categories() {
                 (categoriesArr, category) =>
                   (categoriesArr += `
                 <div key=${category.id} class="categories-options--item">
-                <input type="checkbox" name="category" value="${category.name}">
-                <label>${category.name}</label>
+                <input type="checkbox" name="category" value="${category.name}" id=${category.id} class="category-input">
+                <label for=${category.id}>${category.name}</label>
                 </div>`),
                 ''
               )}
