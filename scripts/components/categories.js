@@ -5,9 +5,9 @@ export function Categories() {
           Categories
           <img src="../../assets/images/angle-down.svg" alt="Search">
           </button>
-          <div id="js-categories" class="display_none categories-options">
+          <form id="js-categories" class="display_none categories-options">
               Categories
-          </div>
+          </form>
           </div>
       `;
 }
