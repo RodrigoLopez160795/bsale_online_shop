@@ -7,3 +7,12 @@
     top: 7.5%;
     left: 24%;
 }
+.categories-options--item:nth-of-type(n+2){
+    margin-top: .5rem;
+}
+
+.categories-options--item{
+    align-items: center;
+    display: flex;
+    gap: .25rem;
+}
