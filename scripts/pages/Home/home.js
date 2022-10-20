@@ -1,4 +1,5 @@
 import { Navbar } from '../../components/navbar.js';
+import { Product } from '../../components/product.js';
 import {
   listenCategories,
   listenSearch,
@@ -9,6 +10,7 @@ import {
 function render() {
   return `
         ${Navbar()}
+        ${Product()}
     `;
 }
 

@@ -1,0 +1,41 @@
+.product-container{
+    margin:10% auto 0px auto;
+    height: 360px;
+    width: 300px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: var(--azureish_white);
+}
+
+.product-container img{
+    height: 270px;
+    width: 300px;
+}
+
+.product-container--image-info{
+    position:relative;
+    display: inline-block;
+}
+
+#product-container--info{
+    color: green;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 2rem;
+}
+
+.product-container--price-name{
+    padding: 0 1rem;
+    background-color: var(--azureish_white);
+}
+
+#name{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#price{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
