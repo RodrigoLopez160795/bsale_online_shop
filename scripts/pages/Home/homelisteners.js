@@ -23,3 +23,19 @@ export function listenShowCategories() {
     category.classList.toggle('display_none');
   });
 }
+
+export function listenCategories() {
+  let categoriesFilters = [];
+  const categories = document.querySelector('#js-categories');
+  categories.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const [...values] = e.target.elements;
+    values.forEach((value) => {
+      if (value.checked === true) categoriesFilters.push(value.value);
+      value.checked = false;
+    });
+    categories.classList.toggle('display_none');
+    if (categoriesFilters.length > 0) console.log(categoriesFilters);
+    categoriesFilters = [];
+  });
+}

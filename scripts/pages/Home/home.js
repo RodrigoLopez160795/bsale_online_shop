@@ -1,5 +1,6 @@
 import { Navbar } from '../../components/navbar.js';
 import {
+  listenCategories,
   listenSearch,
   listenShowCategories,
   listenShowFilters,
@@ -20,6 +21,7 @@ function HomePage() {
       listenSearch();
       listenShowFilters();
       listenShowCategories();
+      listenCategories();
     },
   };
 }
