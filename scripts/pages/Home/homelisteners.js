@@ -39,3 +39,12 @@ export function listenCategories() {
     categoriesFilters = [];
   });
 }
+
+export function listenFilters() {
+  const filters = document.querySelector('#js-filters');
+  filters.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const [min, max, discount, ...rest] = e.target.elements;
+    console.log(min.value, max.value, discount.checked);
+  });
+}

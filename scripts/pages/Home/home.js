@@ -2,6 +2,7 @@ import { Navbar } from '../../components/navbar.js';
 import { Product } from '../../components/product.js';
 import {
   listenCategories,
+  listenFilters,
   listenSearch,
   listenShowCategories,
   listenShowFilters,
@@ -24,6 +25,7 @@ function HomePage() {
       listenShowFilters();
       listenShowCategories();
       listenCategories();
+      listenFilters();
     },
   };
 }
