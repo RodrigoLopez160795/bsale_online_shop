@@ -8,17 +8,17 @@ import {
   listenShowFilters,
 } from './homelisteners.js';
 
-function render(products) {
+function render(products, notFound) {
   return `
         ${Navbar()}
-        ${ProductsList(products)}
+        ${ProductsList(products, notFound)}
     `;
 }
 
-function HomePage(products = []) {
+function HomePage(products = [], notFound = false) {
   return {
     toString() {
-      return render(products);
+      return render(products, notFound);
     },
     addListeners() {
       listenSearch();

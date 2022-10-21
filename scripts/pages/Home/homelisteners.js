@@ -13,9 +13,10 @@ export function listenSearch() {
   query.addEventListener('submit', (e) => {
     e.preventDefault();
     const [search] = e.target.elements;
-    searchProduct(search.value).then((data) =>
-      DOMHandler.load(HomePage(data), root)
-    );
+    searchProduct(search.value).then((data) => {
+      if (data.length > 0) DOMHandler.load(HomePage(data), root);
+      else DOMHandler.load(HomePage([], true), root);
+    });
     search.value = '';
   });
 }

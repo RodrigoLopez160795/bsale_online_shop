@@ -1,6 +1,6 @@
 import { Product } from './product.js';
 
-export function ProductsList(products) {
+export function ProductsList(products, notFound) {
   if (products.length > 0) {
     return `
         <div>
@@ -13,7 +13,9 @@ export function ProductsList(products) {
               </div>
         </div>
         `;
-  } else {
+  } else if (!notFound) {
     return `<p id="ready">Ready to search</p>`;
+  } else if (notFound) {
+    return `<p id="ready">Not found</p>`;
   }
 }
