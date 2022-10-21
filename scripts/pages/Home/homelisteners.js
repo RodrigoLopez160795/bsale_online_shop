@@ -1,5 +1,10 @@
 import { root } from '../../config.js';
 import DOMHandler from '../../dom-handler.js';
+import {
+  filterProductsByCategory,
+  filterProductsByPriceAndDiscount,
+} from '../../helpers.js';
+import { getProducts } from '../../services/products.js';
 import { searchProduct } from '../../services/search.js';
 import HomePage from './home.js';
 
@@ -42,8 +47,12 @@ export function listenCategories() {
       value.checked = false;
     });
     categories.classList.toggle('display_none');
-    if (categoriesFilters.length > 0) console.log(categoriesFilters);
-    categoriesFilters = [];
+    if (categoriesFilters.length > 0) {
+      getProducts().then((data) => {
+        filterProductsByCategory(data, categoriesFilters);
+        categoriesFilters = [];
+      });
+    }
   });
 }
 
@@ -52,6 +61,19 @@ export function listenFilters() {
   filters.addEventListener('submit', (e) => {
     e.preventDefault();
     const [min, max, discount, ...rest] = e.target.elements;
-    console.log(min.value, max.value, discount.checked);
+    if (min.value != '' || max.value != '' || discount.checked != false) {
+      getProducts().then((data) => {
+        filterProductsByPriceAndDiscount(
+          data,
+          min.value,
+          max.value,
+          discount.checked
+        );
+        min.value = '';
+        max.value = '';
+        discount.checked = false;
+      });
+    }
+    filters.classList.toggle('display_none');
   });
 }
