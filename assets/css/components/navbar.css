@@ -5,6 +5,7 @@
     justify-content: space-around;
     padding: .5rem 1rem;
     position: relative;
+    height: 80px;
 }
 
 .logo{

@@ -14,6 +14,6 @@ export function ProductsList(products) {
         </div>
         `;
   } else {
-    return `<p>Ready to search</p>`;
+    return `<p id="ready">Ready to search</p>`;
   }
 }
