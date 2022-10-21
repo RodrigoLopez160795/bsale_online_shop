@@ -1,4 +1,3 @@
-// import { categories } from '../data.js';
 import { getCategories } from '../services/categories.js';
 
 async function renderCategories() {

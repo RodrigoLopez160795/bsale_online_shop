@@ -1,5 +1,5 @@
 import { Navbar } from '../../components/navbar.js';
-import { Product } from '../../components/product.js';
+import { ProductsList } from '../../components/productsList.js';
 import {
   listenCategories,
   listenFilters,
@@ -8,17 +8,17 @@ import {
   listenShowFilters,
 } from './homelisteners.js';
 
-function render() {
+function render(products) {
   return `
         ${Navbar()}
-        ${Product()}
+        ${ProductsList(products)}
     `;
 }
 
-function HomePage() {
+function HomePage(products = []) {
   return {
     toString() {
-      return render();
+      return render(products);
     },
     addListeners() {
       listenSearch();

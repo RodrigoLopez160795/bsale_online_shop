@@ -1,11 +1,16 @@
+import { root } from '../../config.js';
+import DOMHandler from '../../dom-handler.js';
 import { searchProduct } from '../../services/search.js';
+import HomePage from './home.js';
 
 export function listenSearch() {
   const query = document.querySelector('#js-search');
   query.addEventListener('submit', (e) => {
     e.preventDefault();
     const [search] = e.target.elements;
-    searchProduct(search.value).then(console.log);
+    searchProduct(search.value).then((data) =>
+      DOMHandler.load(HomePage(data), root)
+    );
     search.value = '';
   });
 }
