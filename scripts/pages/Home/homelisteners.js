@@ -1,9 +1,11 @@
+import { searchProduct } from '../../services/search.js';
+
 export function listenSearch() {
   const query = document.querySelector('#js-search');
   query.addEventListener('submit', (e) => {
     e.preventDefault();
     const [search] = e.target.elements;
-    console.log(search.value);
+    searchProduct(search.value).then(console.log);
     search.value = '';
   });
 }
